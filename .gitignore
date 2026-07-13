@@ -1,0 +1,18 @@
+# .gitignore
+__pycache__/
+*.py[cod]
+*.pyo
+.DS_Store
+.env
+.vscode/
+.idea/
+
+models/*.pkl
+models/*.json
+models/*.ubj
+
+results/training_metadata.json
+
+data/
+*.parquet
+*.csv
