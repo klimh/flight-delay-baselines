@@ -273,6 +273,7 @@ def build_xgboost(
         n_estimators=n_estimators,
         learning_rate=learning_rate,
         max_depth=max_depth,
+        early_stopping_rounds=30,
         subsample=subsample,
         colsample_bytree=colsample_bytree,
         reg_alpha=reg_alpha,
@@ -331,7 +332,6 @@ def train_xgboost(
         X_train, y_train,
         eval_set=[(X_val, y_val)],
         verbose=False,
-        early_stopping_rounds=early_stopping_rounds,
     )
 
     t_elapsed = time.perf_counter() - t_start
